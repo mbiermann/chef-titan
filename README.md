@@ -1,4 +1,4 @@
-# Opscode Chef cookbook for the Titan
+# Opscode Chef cookbook for Titan graph database
 
 Installs the graph database Titan server package including the Rexster server for HTTP access in version 0.4.1 and utilizing the Apache Cassandra backend in version 0.2.2.
 
