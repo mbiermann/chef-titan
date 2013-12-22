@@ -1,6 +1,8 @@
-# Opscode Chef cookbook for Titan graph database
+# Chef cookbook Titan graph database
 
-Installs the graph database Titan server package including the Rexster server for HTTP access in version 0.4.1 and utilizing the Apache Cassandra backend in version 0.2.2.
+Opscode Chef cookbook for installing the graph database Titan server including the Rexster server for HTTP access in version 0.4.1 and utilizing the Apache Cassandra backend in version 0.2.2.
+
+Target system: Ubuntu/Linux
 
 Please not that when trying to glue together different versions of Titan and Apache Cassandra this must conform to the [compatibility index](thinkaurelius.github.io/titan/wikidoc/0.4.1/Version-Compatibility.html).
 
@@ -11,10 +13,10 @@ Cookbook dependecies are managed by Berkshelf (see Berksfile meta file)
 1. Install [Vagrant](http://www.vagrantup.com/)
 2. Install [Berkshelf](http://berkshelf.com/)
 3. `$ vagrant box add precise64 http://files.vagrantup.com/precise64.box`
-4. $ `vagrant plugin install vagrant-omnibus`
-5. $ `vagrant plugin install vagrant-berkshelf`
-6. $ `berks install`
-7. $ `vagrant up`
+4. `$ vagrant plugin install vagrant-omnibus`
+5. `$ vagrant plugin install vagrant-berkshelf`
+6. `$ berks install`
+7. `$ vagrant up`
 
 ## License
 
