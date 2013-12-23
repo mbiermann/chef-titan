@@ -1,6 +1,5 @@
 include_recipe "java"
 
-# 1. Download the Zip to /tmp
 require "tmpdir"
 
 td      = Dir.tmpdir
@@ -23,8 +22,6 @@ user "#{node.titan.user}" do
   password "#{node.titan.user}" 
 end
 
-# 2. Extract it
-# 3. Copy to /usr/local/titan, update permissions
 package "unzip"
 bash "extract #{tmp}, move it to #{node.titan.installation_dir}" do
   cwd  "/tmp"
@@ -51,7 +48,6 @@ template "/etc/init.d/titan" do
   mode  0755
 end
 
-#xxx fix service stop
 service "titan" do
   supports :start => true, :stop => false, :restart => true
   action [:enable, :start]
