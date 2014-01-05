@@ -46,7 +46,8 @@ case "$1" in
         su -l $TITAN_USER -c "$TITAN_SH start"
         ;;
     status)
-        exit su -l $TITAN_USER -c "$TITAN_SH status"
+        set -e
+        su -l $TITAN_USER -c "$TITAN_SH status"
         ;;
     *)
         echo "Usage: $SCRIPTNAME {start|stop|restart|force-reload|status}" >&2
