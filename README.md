@@ -4,7 +4,7 @@ Opscode Chef cookbook for installing the graph database Titan server including t
 
 Target system: Ubuntu/Linux
 
-Please not that when trying to glue together different versions of Titan and Apache Cassandra this must conform to the [compatibility index](thinkaurelius.github.io/titan/wikidoc/0.4.1/Version-Compatibility.html).
+Please not that when trying to glue together different versions of Titan and Apache Cassandra this must conform to the [compatibility index](http://thinkaurelius.github.io/titan/wikidoc/0.4.1/Version-Compatibility.html).
 
 Cookbook dependecies are managed by Berkshelf (see Berksfile meta file)
 
