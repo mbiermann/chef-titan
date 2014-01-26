@@ -54,5 +54,4 @@ service "titan" do
   action [:enable, :start]
 end
 
-bash "service titan status"
-
+include_recipe "titan::graph"
