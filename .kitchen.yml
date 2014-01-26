@@ -1,0 +1,17 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_solo
+
+platforms:
+  - name: precise64
+    driver_config:
+      box: precise64
+
+suites:
+  - name: default
+    run_list:
+      - recipe[titan::default]
+    attributes:

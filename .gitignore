@@ -1,2 +1,5 @@
 Berksfile.lock
 .vagrant
+.kitchen/
+.kitchen.local.yml
+Gemfile.lock
