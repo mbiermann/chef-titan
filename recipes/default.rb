@@ -55,3 +55,7 @@ service "titan" do
 end
 
 include_recipe "titan::graph"
+
+if node[:titan][:run_opscenter]
+  include_recipe "titan::opscenter"
+end
