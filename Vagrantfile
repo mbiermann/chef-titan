@@ -92,6 +92,12 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   #
   config.vm.provision :chef_solo do |chef|
     chef.add_recipe "titan"
+    chef.json = {
+       :titan => {
+          :graph => "test",
+          :run_opscenter => true
+       }
+    }
   end
 
   # Enable provisioning with chef server, specifying the chef server URL,
