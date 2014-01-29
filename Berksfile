@@ -1,4 +1,4 @@
 metadata
 
 cookbook 'java'
-cookbook "cassandra,  git: "git://github.com/michaelklishin/cassandra-chef-cookbook.git"
+cookbook 'cassandra-chef-cookbook,  github: 'michaelklishin/cassandra-chef-cookbook'
