@@ -2,4 +2,4 @@
 package "libssl0.9.8"
 
 # Install the OpsCenter server only. Agents can then be configured via OpsCode dashboard.
-include_recipe "cassandra-chef-cookbook::opscenter_server"
+include_recipe "cassandra::opscenter_server"
