@@ -94,10 +94,18 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provision :chef_solo do |chef|
     chef.add_recipe "titan"
     chef.json = {
-       :titan => {
-          :graph => "test",
-          :run_opscenter => true
-       }
+        :titan => {
+          :graph => "test"
+        },
+        :opscenter => {
+          :enabled => true,
+          :clusters => [
+            {
+              :name => "Test-Cluster",
+              :seeds => ["0.0.0.0"]
+            }
+          ]
+        }
     }
   end
 

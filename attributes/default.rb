@@ -7,4 +7,3 @@ default[:titan] = {
   :user 			=> "titan"
 }
 default[:titan][:bundle] = File.basename(default[:titan][:download_url])
-default[:titan][:run_opscenter] = false

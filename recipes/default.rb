@@ -36,7 +36,7 @@ bash "extract #{tmp}, move it to #{node.titan.installation_dir}" do
   creates "#{node.titan.installation_dir}/bin/titan.sh"
 end
 
-["/usr/local/titan"].each  do |dir|
+["/usr/local/titan"].each do |dir|
   bash "chown -R #{node.titan.user}:#{node.titan.user} #{dir}" do
     user "root"
     code "([ -d #{dir} ] || mkdir -p #{dir}) && chown -R #{node.titan.user}:#{node.titan.user} #{dir} && chmod -R 777 #{dir}"
@@ -56,6 +56,6 @@ end
 
 include_recipe "titan::graph"
 
-if node[:titan][:run_opscenter]
+if node[:opscenter][:enabled]
   include_recipe "titan::opscenter"
 end

@@ -1,4 +1,3 @@
 metadata
 
-cookbook 'java'
-cookbook 'cassandra-chef-cookbook,  github: 'michaelklishin/cassandra-chef-cookbook'
+cookbook 'cassandra-chef-cookbook',  github: 'michaelklishin/cassandra-chef-cookbook'

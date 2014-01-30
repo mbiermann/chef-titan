@@ -1,0 +1,12 @@
+[jmx]
+port = 7199
+
+[cassandra]
+seed_hosts = <%= @seeds.join(',') %>
+api_port = 9160
+
+[cassandra_metrics]
+ignored_keyspaces = system, OpsCenter
+1min_ttl = 604800
+5min_ttl = 2419200
+2hr_ttl = 31536000
