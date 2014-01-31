@@ -55,3 +55,8 @@ service "titan" do
 end
 
 include_recipe "titan::graph"
+
+# Finally restart OpsCenter
+service "titan" do 
+  action :restart
+end
