@@ -55,7 +55,3 @@ service "titan" do
 end
 
 include_recipe "titan::graph"
-
-unless node[:opscenter][:clusters].nil?
-  include_recipe "titan::opscenter"
-end
