@@ -1,9 +1,5 @@
-default[:opscenter] = {
-	:enabled => false,
-	:clusters => [
-		{
-			:name 	=> "",
-			:seeds 	=> []
-		}
-	]
+default[:opscenter][:clusters] = {
+	"Default" => {
+		:seeds 	=> ["0.0.0.0"]
+	}
 }

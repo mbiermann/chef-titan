@@ -96,15 +96,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     chef.json = {
         :titan => {
           :graph => "test"
-        },
-        :opscenter => {
-          :enabled => true,
-          :clusters => [
-            {
-              :name => "Test-Cluster",
-              :seeds => ["0.0.0.0"]
-            }
-          ]
         }
     }
   end

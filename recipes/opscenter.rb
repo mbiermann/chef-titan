@@ -20,10 +20,10 @@ directory clusters_conf_path do
 end
 
 # Install a configuration file for each cluster specified in attributes
-node[:opscenter][:clusters].each do |cluster|
-	template "#{clusters_conf_path}/#{cluster.name.tr(" ", "_")}.conf" do
+node[:opscenter][:clusters].each do |name, properties|
+	template "#{clusters_conf_path}/#{name.tr(" ", "_")}.conf" do
 		source "opscenter_cluster.conf.erb"
-		variables(cluster)
+		variables(properties)
 		owner 'root'
   		mode  0755
 		notifies :restart, 'service[opscenterd]', :delayed

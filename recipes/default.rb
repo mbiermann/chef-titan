@@ -56,6 +56,6 @@ end
 
 include_recipe "titan::graph"
 
-if node[:opscenter][:enabled]
+unless node[:opscenter][:clusters].nil?
   include_recipe "titan::opscenter"
 end
