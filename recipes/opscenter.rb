@@ -31,11 +31,6 @@ node[:opscenter][:clusters].each do |name, properties|
 end
 
 # Finally restart OpsCenter
-service "titan" do 
-	action :restart
-end
-
-# Finally restart OpsCenter
 service "opscenterd" do 
 	action :restart
 end
