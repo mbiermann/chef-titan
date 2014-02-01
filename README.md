@@ -8,6 +8,37 @@ Please not that when trying to glue together different versions of Titan and Apa
 
 Cookbook dependecies are managed by Berkshelf (see Berksfile meta file)
 
+## Attributes
+
+### Default recipe
+
+	{
+		"titan": {
+			"graph": "sample_graph",
+			"download_url": "http://s3.thinkaurelius.com/downloads/titan/titan-server-0.4.1.zip",
+  			"bundle": "titan-server-0.4.1.zip",
+  			"installation_dir": "/usr/local/titan",
+  			"user": "titan"
+  		},
+  		"java": {
+  			"install_flavor": "oracle",
+			"jdk_version": "7"
+			"oracle": {
+				"accept_oracle_download_terms": true
+			}
+		}
+	}
+
+### OpsCenter recipe
+
+	{
+		"opscenter": {
+			"clusters": {
+				"seeds": "10.0.1.0,10.0.1.1,10.0.1.2"
+			}
+		}
+	}
+
 ## Using vagrant
 
 1. Install [Vagrant](http://www.vagrantup.com/)
