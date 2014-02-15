@@ -54,9 +54,10 @@ service "titan" do
   action [:enable, :start]
 end
 
-include_recipe "titan::graph"
+include_recipe "titan::_graph"
+include_recipe "titan::_rexster"
 
-# Finally restart OpsCenter
+# Finally restart Titan
 service "titan" do 
   action :restart
 end

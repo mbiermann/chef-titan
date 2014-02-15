@@ -10,5 +10,4 @@ bash "install_graph" do
 	user	"titan"
 	group	"titan"
 	cwd "/usr/local/titan/conf/"
-	notifies :restart, 'service[titan]', :delayed
 end
